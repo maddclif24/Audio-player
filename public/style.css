@@ -1,0 +1,32 @@
+.logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    margin-top: 0;
+}
+
+audio {
+    margin-top: 10px;
+    background-color: inherit;
+    width: 400px;
+}
+
+#Next {
+    padding: 7px;
+    background: dimgrey;
+    color: white;
+    border-radius: 5px;
+}
+
+#player-block {
+    width: 500px;
+    background-image: linear-gradient(to bottom, #ccffff 0%, #99ff99 100%);
+    padding: 25px;
+}
+
+#trackSelector {
+    margin-top: 10px;
+    border: solid 3px black;
+}
