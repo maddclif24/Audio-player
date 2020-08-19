@@ -7,6 +7,7 @@ const getNextTrack = () => {
         oggTrack.setAttribute('src', oggTracks[0]);
         mp3Track.setAttribute('src', mp3Tracks[0]);
     } else {
+        document.getElementById('player').setAttribute('autoplay', 'autoplay');
         oggTrack.setAttribute('src', oggTracks[oggTracks.indexOf(oggTrack.getAttribute('src')) + 1]);
         mp3Track.setAttribute('src', mp3Tracks[mp3Tracks.indexOf(mp3Track.getAttribute('src')) + 1]);
     }
