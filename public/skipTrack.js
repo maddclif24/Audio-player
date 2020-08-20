@@ -1,6 +1,15 @@
-const oggTracks = ['jazzfrenchy.ogg', 'jazzpiano.ogg'];
-const mp3Tracks = ['jazzfrenchy.mp3', 'jazzpiano.mp3'];
-const getNextTrack = () => {
+const allElementsLi = document.getElementsByTagName('li');
+const keys = Object.keys(allElementsLi);
+
+const oggTracks = [];
+const mp3Tracks = [];
+
+for (const key of keys) {
+    oggTracks.push(`${allElementsLi[key].textContent}.ogg`);
+    mp3Tracks.push(`${allElementsLi[key].textContent}.mp3`);
+}
+
+function getNextTrack() {
     const oggTrack = document.getElementById('ogg');
     const mp3Track = document.getElementById('mp3');
     if (oggTracks.indexOf(oggTrack.getAttribute('src')) === oggTracks.length - 1) {

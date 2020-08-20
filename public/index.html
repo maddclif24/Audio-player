@@ -8,20 +8,14 @@
 <body>
 <div id="player-block">
     <h1>Audio Player</h1>
-    <div>
-        <img class="logo" src="gorillaz_3_0.png" alt="gorillaz">
-    </div>
     <audio id="player" controls>
-        <source id="ogg" src="jazzfrenchy.ogg" type="audio/ogg">
-        <source id="mp3" src="jazzfrenchy.mp3" type="audio/mp3">
+        <source id="ogg" src="tracks/jazzfrenchy.ogg" type="audio/ogg">
+        <source id="mp3" src="tracks/jazzfrenchy.mp3" type="audio/mp3">
         Ваш браузер не пожжерживает тег audio!
     </audio>
     <button onclick="getNextTrack()" id="Next">Next Track</button>
-    <div id="trackSelector">
-         <ol id="trackList"></ol>
-    </div>
+    <div id="trackSelector"></div>
 </div>
 <script src="skipTrack.js"></script>
-<script src="toCreateTrackList.js"></script>
 </body>
 </html>
