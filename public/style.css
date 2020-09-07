@@ -25,3 +25,9 @@ audio {
     margin-top: 10px;
     border: solid 3px black;
 }
+
+#current-track {
+    text-align: center;
+    height: 20px;
+    border: dotted 2px olivedrab;
+}

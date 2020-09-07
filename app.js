@@ -32,11 +32,13 @@ app.get('/', (req, res) => {
       Ваш браузер не пожжерживает тег audio!
   </audio>
   <button onclick="getNextTrack()" id="Next">Next Track</button>
+  <div id="current-track"></div>
   <div id="trackSelector">${list}</div>
         <form method='post' action='upload' enctype="multipart/form-data">
         <input type='file' name='fileUploaded'>
         <input type='submit'>
       </div>
+      <script src="showCurrentTrack.js"></script>
       <script src="skipTrack.js"></script>
       </body>
       </html>`

@@ -12,13 +12,14 @@ for (const key of keys) {
 function getNextTrack() {
     const oggTrack = document.getElementById('ogg');
     const mp3Track = document.getElementById('mp3');
-    if (oggTracks.indexOf(oggTrack.getAttribute('src')) === oggTracks.length - 1) {
-        oggTrack.setAttribute('src', oggTracks[0]);
-        mp3Track.setAttribute('src', mp3Tracks[0]);
+
+    if (oggTracks.indexOf(oggTrack.getAttribute('src').slice(7)) === oggTracks.length - 1) {
+        oggTrack.setAttribute('src', `tracks/${oggTracks[0]}`);
+        mp3Track.setAttribute('src', `tracks/${mp3Tracks[0]}`);
     } else {
         document.getElementById('player').setAttribute('autoplay', 'autoplay');
-        oggTrack.setAttribute('src', oggTracks[oggTracks.indexOf(oggTrack.getAttribute('src')) + 1]);
-        mp3Track.setAttribute('src', mp3Tracks[mp3Tracks.indexOf(mp3Track.getAttribute('src')) + 1]);
+        oggTrack.setAttribute('src', `tracks/${oggTracks[oggTracks.indexOf(oggTrack.getAttribute('src').slice(7)) + 1]}`);
+        mp3Track.setAttribute('src', `tracks/${mp3Tracks[mp3Tracks.indexOf(mp3Track.getAttribute('src').slice(7)) + 1]}`);
     }
     document.getElementById('player').load();
 }
