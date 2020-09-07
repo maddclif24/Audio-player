@@ -1,4 +1,4 @@
-const allElementsLi = document.getElementsByTagName('li');
+const allElementsLi = document.getElementsByTagName('a');
 const keys = Object.keys(allElementsLi);
 
 const oggTracks = [];

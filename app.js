@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   const tracks = fs.readdirSync('public/tracks');
   const nameTracks = tracks.map((item) => item.slice(0, -4));
   const trackList = nameTracks.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
-  const list = `<ol id="trackList">${trackList.map((item) => `<li>${item}</li>`).join('')}</ol>`;
+  const list = `<ol id="trackList">${trackList.map((item) => `<li><a onclick="chooseTrack(event)" href="#">${item}</a></li>`).join('')}</ol>`;
 
   const html = `
 <!DOCTYPE html>
@@ -40,6 +40,7 @@ app.get('/', (req, res) => {
       </div>
       <script src="showCurrentTrack.js"></script>
       <script src="skipTrack.js"></script>
+      <script src="trackSelection.js"></script>
       </body>
       </html>`
   res.send(html);
