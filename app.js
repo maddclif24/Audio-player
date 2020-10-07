@@ -22,21 +22,22 @@ app.get('/', (req, res) => {
       <meta charset="UTF-8">
       <title>Title</title>
       <link rel="stylesheet" href="style.css">
+      <script src="https://kit.fontawesome.com/f5792cc639.js" crossorigin="anonymous"></script>
       </head>
       <body>
-      <div id="player-block">
       <h1>Audio Player</h1>
+      <div id="player-block">
       <audio id="player" controls>
-  <source id="ogg" src="tracks/jazzfrenchy.ogg" type="audio/ogg">
+      <source id="ogg" src="tracks/jazzfrenchy.ogg" type="audio/ogg">
       <source id="mp3" src="tracks/jazzfrenchy.mp3" type="audio/mp3">
       Ваш браузер не пожжерживает тег audio!
   </audio>
-  <button onclick="getNextTrack()" id="Next">Next Track</button>
+  <button class="btn" onclick="getNextTrack()" id="Next"><i class="fas fa-fast-forward fa-1x"></i></button>
   <div id="current-track"></div>
   <div id="trackSelector">${list}</div>
         <form method='post' action='upload' enctype="multipart/form-data">
-        <input type='file' name='fileUploaded'>
-        <input type='submit'>
+        <input class="loadBtn" type='file' name='fileUploaded' id="browse">
+        <input class="loadBtn" type='submit' id="upload" value="Upload">
       </div>
       <script src="showCurrentTrack.js"></script>
       <script src="skipTrack.js"></script>

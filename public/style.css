@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+body {
+    background-image: url('/musicBG.jpg');
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+}
+
 h1 {
-    margin-top: 0;
+    font-weight: bold;
+    font-size: 64px;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+    text-shadow: black 0 0 50px;
 }
 
 audio {
-    margin-top: 10px;
-    background-color: inherit;
+    margin: 0;
     width: 400px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -17,25 +30,32 @@ a:hover {
 }
 
 #Next {
-    padding: 7px;
-    background: dimgrey;
-    color: white;
-    border-radius: 5px;
+    width: 50px;
+    color: black;
+    border-radius: 2%;
 }
 
 #player-block {
-    width: 500px;
-    background-image: linear-gradient(to bottom, #ccffff 0%, #99ff99 100%);
+    border-radius: 1%;
+    background: lightgray;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    width: 600px;
+    height: 300px;
     padding: 25px;
+    border: solid 4px white;
 }
 
 #trackSelector {
-    margin-top: 10px;
-    border: solid 3px black;
+    margin-top: 0;
+    background: lightgray;
+    border: solid 3px white;
 }
 
 #current-track {
+    background: lightgray;
     text-align: center;
     height: 20px;
-    border: dotted 2px olivedrab;
+    border: solid 3px white;
 }
