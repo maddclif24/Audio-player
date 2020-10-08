@@ -48,7 +48,7 @@ app.get('/audio', (req, res) => {
 });
 
 app.get('/countdown', (req, res) => {
-    app.use(express.static('/Countdown-Timer/public'));
+    app.use(express.static('Countdown-Timer/public'));
     res.sendFile(__dirname + '/Countdown-Timer/public/index.html');
 });
 
