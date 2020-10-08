@@ -1,5 +1,5 @@
 export function newHtml() {
-    const fs = require('fs');
+    import fs from 'fs';
     const tracks = fs.readdirSync('public/tracks');
     const nameTracks = tracks.map((item) => item.slice(0, -4));
     const trackList = nameTracks.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
