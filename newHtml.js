@@ -8,7 +8,7 @@ export const newHtml = `
 <!DOCTYPE html>
   <html lang="">
       <head>
-      <meta charset="UTF-8">
+      <meta charset="utf-8">
       <title>Title</title>
       <link rel="stylesheet" href="style.css">
       <script src="https://kit.fontawesome.com/f5792cc639.js" crossorigin="anonymous"></script>
