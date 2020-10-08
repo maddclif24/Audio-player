@@ -47,6 +47,11 @@ app.get('/audio', (req, res) => {
   res.send(html);
 });
 
+app.get('/countdown', (req, res) => {
+    app.use(express.static('.Countdown-Timer/public'));
+    res.send('.Countdown-Timer/public/index.html');
+});
+
 app.use(busboy());
 app.use(express.static(path.join(__dirname, 'public/tracks')));
 
