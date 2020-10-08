@@ -4,11 +4,12 @@ const app = express();
 const busboy = require('connect-busboy');
 const path = require('path');
 const fse = require('fs-extra');
+const html = newHtml();
 
 app.get('/audio', (req, res) => {
   app.use(express.static('public'));
   app.use(express.static('public/tracks'));
-  res.send(newHtml);
+  res.send(html);
 });
 
 app.get('/countdown', (req, res) => {

@@ -1,10 +1,12 @@
 const fs = require('fs');
-const tracks = fs.readdirSync('public/tracks');
-const nameTracks = tracks.map((item) => item.slice(0, -4));
-const trackList = nameTracks.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
-const list = `<ol id="trackList">${trackList.map((item) => `<li><a onclick="chooseTrack(event)" href="#">${item}</a></li>`).join('')}</ol>`;
+
+export const newHtml = () => {
+    const tracks = fs.readdirSync('public/tracks');
+    const nameTracks = tracks.map((item) => item.slice(0, -4));
+    const trackList = nameTracks.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
+    const list = `<ol id="trackList">${trackList.map((item) => `<li><a onclick="chooseTrack(event)" href="#">${item}</a></li>`).join('')}</ol>`;
 /// create new HTML
-export const newHtml = `
+    const result = `
 <!DOCTYPE html>
   <html lang="">
       <head>
@@ -33,3 +35,5 @@ export const newHtml = `
       <script src="trackSelection.js"></script>
       </body>
       </html>`;
+    return result;
+};
