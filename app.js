@@ -1,9 +1,9 @@
 import { newHtml } from './newHtml.js';
 import Express from 'express';
 const app = new Express();
-const busboy = require('connect-busboy');
-const path = require('path');
-const fse = require('fs-extra');
+import busboy from 'connect-busboy';
+import path from 'path';
+import fse from 'fs-extra';
 const html = newHtml();
 
 app.get('/audio', (req, res) => {
