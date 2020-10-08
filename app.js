@@ -6,7 +6,7 @@ const path = require('path');
 const fse = require('fs-extra');
 
 
-app.get('/', (req, res) => {
+app.get('/audio', (req, res) => {
   app.use(express.static('public'));
   app.use(express.static('public/tracks'));
 
