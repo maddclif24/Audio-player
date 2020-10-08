@@ -48,8 +48,8 @@ app.get('/audio', (req, res) => {
 });
 
 app.get('/countdown', (req, res) => {
-    app.use(express.static('.Countdown-Timer/public'));
-    res.send('.Countdown-Timer/public/index.html');
+    app.use(express.static('./Countdown-Timer/public'));
+    res.send('./Countdown-Timer/public/index.html');
 });
 
 app.use(busboy());
