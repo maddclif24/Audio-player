@@ -1,6 +1,6 @@
 import { newHtml } from './newHtml.js';
-const express = require('express');
-const app = express();
+import Express from 'express';
+const app = new Express();
 const busboy = require('connect-busboy');
 const path = require('path');
 const fse = require('fs-extra');
