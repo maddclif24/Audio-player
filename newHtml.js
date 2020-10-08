@@ -3,8 +3,8 @@ const tracks = fs.readdirSync('public/tracks');
 const nameTracks = tracks.map((item) => item.slice(0, -4));
 const trackList = nameTracks.reduce((x, y) => x.includes(y) ? x : [...x, y], []);
 const list = `<ol id="trackList">${trackList.map((item) => `<li><a onclick="chooseTrack(event)" href="#">${item}</a></li>`).join('')}</ol>`;
-
-export const html = `
+/// create new HTML
+export const newHtml = `
 <!DOCTYPE html>
   <html lang="">
       <head>

@@ -1,4 +1,4 @@
-import { html } from './newHtml';
+import { newHtml } from './newHtml.js';
 const express = require('express');
 const app = express();
 const busboy = require('connect-busboy');
@@ -8,8 +8,7 @@ const fse = require('fs-extra');
 app.get('/audio', (req, res) => {
   app.use(express.static('public'));
   app.use(express.static('public/tracks'));
-
-  res.send(html);
+  res.send(newHtml);
 });
 
 app.get('/countdown', (req, res) => {
