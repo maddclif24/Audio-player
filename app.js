@@ -51,6 +51,11 @@ app.get('/countdown', (req, res) => {
     res.sendFile(__dirname + '/Countdown-Timer/public/index.html');
 });
 
+app.get('/bomberman', (req, res) => {
+    app.use(express.static('/bomberman/public'));
+    res.sendFile(__dirname + '/bomberman/public/index.html');
+});
+
 app.use(busboy());
 app.use(express.static(path.join(__dirname, 'public/tracks')));
 
